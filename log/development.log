@@ -164,3 +164,165 @@ Completed 200 OK in 735ms (Views: 705.4ms | ActiveRecord: 8.5ms)
 
 
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2018-11-08 10:03:11 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-11-08 10:03:26 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-08 10:03:56 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (37.6ms)
+Completed 500 Internal Server Error in 3947ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x00005625685b6380>:0x0000562568595518>):
+    14:     <!-- <% if current_user %>
+    15:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    16:     <% else %>
+    17:       <%= link_to “Login”, new_user_session_path %>
+    18:     <% end %> -->
+    19: 
+    20:     <%= yield %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___3874482019714431574_47359332740300'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-08 10:04:46 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (5.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (31.0ms)
+Completed 500 Internal Server Error in 3997ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x000055f23fdd96b8>:0x000055f23fdd1490>):
+    14:     <% if current_user %>
+    15:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    16:     <% else %>
+    17:       <%= link_to “Login”, new_user_session_path %>
+    18:     <% end %>
+    19: 
+    20:     <%= yield %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb___1353721883038511301_47249470428080'
+Started GET "/admin" for 127.0.0.1 at 2018-11-08 10:05:03 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `admin' for nil:NilClass):
+  
+config/initializers/rails_admin.rb:4:in `block (2 levels) in <main>'
+Started GET "/admin" for 127.0.0.1 at 2018-11-08 10:05:17 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `admin' for nil:NilClass):
+  
+config/initializers/rails_admin.rb:4:in `block (2 levels) in <main>'
+Started GET "/admin" for 127.0.0.1 at 2018-11-08 10:06:20 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `admin' for nil:NilClass):
+  
+config/initializers/rails_admin.rb:4:in `block (2 levels) in <main>'
+Started GET "/" for 127.0.0.1 at 2018-11-08 10:09:40 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 2332ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x0000562910ffd590>:0x00005629117ab0d0>):
+    14:     <!-- <% if current_user %>
+    15:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    16:     <% else %>
+    17:       <%= link_to “Login”, new_user_session_path %>
+    18:     <% end %> -->
+    19: 
+    20:     <%= yield %>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__51102008248149138_47367197686720'
+Started GET "/admin" for 127.0.0.1 at 2018-11-08 10:10:12 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `admin' for nil:NilClass):
+  
+config/initializers/rails_admin.rb:4:in `block (2 levels) in <main>'
