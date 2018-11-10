@@ -983,3 +983,42 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 769ms (Views: 735.9ms | ActiveRecord: 3.9ms)
 
 
+Started GET "/admin/user" for 127.0.0.1 at 2018-11-10 12:18:03 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `admin' for nil:NilClass):
+  
+config/initializers/rails_admin.rb:4:in `block (2 levels) in <main>'
+Started GET "/admin" for 127.0.0.1 at 2018-11-10 12:18:11 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `admin' for nil:NilClass):
+  
+config/initializers/rails_admin.rb:4:in `block (2 levels) in <main>'
+Started GET "/admin" for 127.0.0.1 at 2018-11-10 12:19:30 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (45.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (16.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (44.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (12.2ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (23.4ms)
+Completed 200 OK in 2417ms (Views: 1312.5ms | ActiveRecord: 2.8ms)
+
+
