@@ -1298,3 +1298,480 @@ Processing by RailsAdmin::MainController#dashboard as HTML
 Completed 200 OK in 96ms (Views: 76.3ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/admin/" for 127.0.0.1 at 2018-11-12 10:12:47 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (87.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (11.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (42.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.7ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (16.7ms)
+Completed 200 OK in 3105ms (Views: 1976.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-11-12 10:19:30 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (54.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (25.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (58.3ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (18.8ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (36.2ms)
+Completed 200 OK in 3095ms (Views: 1740.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-12 10:19:46 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (121.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.3ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (25.2ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.2ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (21.4ms)
+Completed 200 OK in 814ms (Views: 792.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-12 10:19:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-12 10:20:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (42.2ms)
+Completed 500 Internal Server Error in 4772ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x00007f3582ba6468>:0x00007f3582ba40c8>):
+    16:     <!-- <% if current_user %>
+    17:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    18:     <% else %>
+    19:       <%= link_to “Login”, new_user_session_path %>
+    20:     <% end %> -->
+    21: 
+    22:     <%= yield %>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___398272022373893982_69933899760820'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-12 10:20:38 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (11.2ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (37.9ms)
+Completed 500 Internal Server Error in 3202ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x00007f3582ba6468>:0x00007f3581ecfeb0>):
+    16:     <!-- <% if current_user %>
+    17:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    18:     <% else %>
+    19:       <%= link_to “Login”, new_user_session_path %>
+    20:     <% end %> -->
+    21: 
+    22:     <%= yield %>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___398272022373893982_69933895144160'
+Started GET "/users/sign_in/create" for 127.0.0.1 at 2018-11-12 10:20:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in/create"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-12 10:21:28 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 1802ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x00007f3580ca5dc0>:0x00007f3580c78488>):
+    16:     <!-- <% if current_user %>
+    17:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    18:     <% else %>
+    19:       <%= link_to “Login”, new_user_session_path %>
+    20:     <% end %> -->
+    21: 
+    22:     <%= yield %>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___398272022373893982_69933885000220'
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:22:46 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (272.9ms)
+Completed 200 OK in 364ms (Views: 324.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/1?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:23:08 +0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (33.6ms)
+Completed 200 OK in 162ms (Views: 111.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:23:24 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (251.7ms)
+Completed 200 OK in 322ms (Views: 285.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/2?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:23:27 +0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (27.2ms)
+Completed 200 OK in 97ms (Views: 54.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:23:38 +0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (18.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (16.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (12.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (6.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (42.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (200.7ms)
+Completed 200 OK in 301ms (Views: 267.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/2?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:23:51 +0200
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (33.9ms)
+Completed 200 OK in 144ms (Views: 98.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:23:54 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (249.0ms)
+Completed 200 OK in 332ms (Views: 295.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:29:15 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (60.4ms)
+Completed 200 OK in 170ms (Views: 149.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:43:22 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (211.1ms)
+Completed 200 OK in 278ms (Views: 243.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:43:29 +0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (18.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (14.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.2ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (2.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (18.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (1.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (37.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (175.9ms)
+Completed 200 OK in 273ms (Views: 227.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:43:37 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (225.2ms)
+Completed 200 OK in 305ms (Views: 279.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:43:43 +0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (6.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (4.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (8.9ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (2.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (24.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (82.8ms)
+Completed 200 OK in 149ms (Views: 111.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user/2/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:43:46 +0200
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_delete_notice.html.haml (14.9ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (71.9ms)
+Completed 200 OK in 179ms (Views: 134.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/admin/user/2/delete" for 127.0.0.1 at 2018-11-12 10:43:51 +0200
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WpSwsHSEROBOzQlXTiMguGNMSk/nCoa7sNP/yVoKyct9ZDjzn//YHtwyVPBCNQf47eeysk64tmYL6UOe7iYNAQ==", "return_to"=>"http://localhost:3000/admin/user/2/edit", "_continue"=>"", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/user/2/edit
+Filter chain halted as :check_for_cancel rendered or redirected
+Completed 302 Found in 39ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user/2/edit" for 127.0.0.1 at 2018-11-12 10:43:51 +0200
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_boolean.html.haml (12.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (12.6ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (11.5ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_datetime.html.haml (8.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (61.7ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/application (197.9ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (20.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (56.0ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (16.9ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (51.8ms)
+Completed 200 OK in 986ms (Views: 939.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-12 10:43:57 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (209.3ms)
+Completed 200 OK in 281ms (Views: 245.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-14 10:16:46 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 3586ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“Login”' for #<#<Class:0x00005582118815b0>:0x0000558211822e70>):
+    16:     <!-- <% if current_user %>
+    17:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    18:     <% else %>
+    19:       <%= link_to “Login”, new_user_session_path %>
+    20:     <% end %> -->
+    21: 
+    22:     <%= yield %>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___2969429605223445297_47008559981880'
+Started GET "/index" for 127.0.0.1 at 2018-11-14 10:17:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-14 10:17:37 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1264ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<HomeController:0x000055d08bb13008>):
+  
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2018-11-14 10:18:27 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3503ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00007fcaa25f6b48>:0x00007fcaa25f5130>
+Did you mean?  current_page?):
+    13:     <!-- add this code -->
+    14:     <!-- Я думаю що цей код говно і не потрібний тут!!! -->
+    15:     
+    16:     <!-- <% if current_user %>
+    17:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    18:     <% else %>
+    19:       <%= link_to “Login”, new_user_session_path %>
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1209443040085618594_70254142749140'
+Started GET "/" for 127.0.0.1 at 2018-11-14 10:19:02 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 2864ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000055ad9bac1c70>:0x000055ad9bb74640>
+Did you mean?  current_page?):
+    13:     <!-- add this code -->
+    14:     <!-- Я думаю що цей код говно і не потрібний тут!!! -->
+    15:     
+    16:     <!-- <% if current_user %>
+    17:       <%= link_to “Logout”, destroy_user_session_path, method: :delete %>
+    18:     <% else %>
+    19:       <%= link_to “Login”, new_user_session_path %>
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__995406444703064772_47102065594040'
+Started GET "/" for 127.0.0.1 at 2018-11-14 10:20:18 +0200
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 934ms (Views: 909.8ms | ActiveRecord: 0.0ms)
+
+
