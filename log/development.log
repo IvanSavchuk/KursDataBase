@@ -1831,3 +1831,180 @@ Migrating to CreatePosts (20181114082352)
   ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+Started GET "/admin/user" for 127.0.0.1 at 2018-11-14 10:27:31 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (181.0ms)
+Started GET "/admin" for 127.0.0.1 at 2018-11-14 10:27:41 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (67.5ms)
+Started GET "/" for 127.0.0.1 at 2018-11-14 10:27:43 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6652ms (Views: 6648.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (16.9ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (192.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (19.7ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (54.8ms)
+Completed 200 OK in 21173ms (Views: 19750.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-14 10:27:55 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 255ms (Views: 250.6ms | ActiveRecord: 0.4ms)
+
+
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (13.3ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (29.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (16.8ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (22.6ms)
+Completed 200 OK in 16311ms (Views: 16230.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-14 10:27:59 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (42.3ms)
+  Rendered posts/new.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 223ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-11-14 10:28:34 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CPC+q//O6hyE/wLuehUIeHfHulzMCJWt4XaHEn4SSaNvbIF5n9Py6PaENMolV7OdQ2+yjoP75VXMLcTRRbxH+w==", "post"=>{"name"=>"Films", "title"=>"test", "content"=>"add text "}, "commit"=>"Create Post"}
+  [1m[35m (4.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[36mPost Create (11.7ms)[0m  [1m[32mINSERT INTO "posts" ("name", "title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Films"], ["title", "test"], ["content", "add text "], ["created_at", "2018-11-14 08:28:34.459510"], ["updated_at", "2018-11-14 08:28:34.459510"]]
+  ↳ app/controllers/posts_controller.rb:30
+  [1m[35m (96.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:30
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 127ms (ActiveRecord: 112.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-11-14 10:28:34 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 161ms (Views: 150.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-14 10:28:40 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 165ms (Views: 162.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2018-11-14 10:28:43 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.3ms)
+  Rendered posts/edit.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 172ms (Views: 167.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2018-11-14 10:29:26 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vsOWyPX3EaPinU9jInFpfTGP1Pl3eBT+gFLcyhOCGEljjCoKiHBrcmwy11COpI0oHDuss6iJLVnlENRnR2BV6Q==", "post"=>{"name"=>"Films", "title"=>"test", "content"=>"add text \r\n\r\n//update this text!"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:44
+  [1m[36mPost Update (10.0ms)[0m  [1m[33mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "add text \r\n\r\n//update this text!"], ["updated_at", "2018-11-14 08:29:27.001932"], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:44
+  [1m[35m (56.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:44
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 102ms (ActiveRecord: 66.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-11-14 10:29:27 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 145ms (Views: 135.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-14 10:29:32 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 150ms (Views: 146.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-11-14 10:29:35 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:67
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 157ms (Views: 152.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-14 10:29:38 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 170ms (Views: 167.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-14 10:29:54 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (58.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.2ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (34.1ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (20.2ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (14.1ms)
+Completed 200 OK in 804ms (Views: 763.8ms | ActiveRecord: 7.6ms)
+
+
