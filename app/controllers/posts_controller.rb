@@ -15,13 +15,11 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    def show
-      @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
 
-      respond_to do |format|
-        format.html  # show.html.erb
-        format.json  { render :json => @post }
-      end
+    respond_to do |format|
+      format.html  # show.html.erb
+      format.json  { render :json => @post }
     end
   end
 
@@ -65,7 +63,7 @@ class PostsController < ApplicationController
   @post = Post.find(params[:id])
 
     respond_to do |format|
-      if @post.update_attributes(params[:post])
+      if @post.update_attribute(params[:post])
         format.html  { redirect_to(@post,
                       :notice => 'Post was successfully updated.') }
         format.json  { head :no_content }
@@ -80,9 +78,11 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post.destroy
+  @post = Post.find(params[:id])
+  @post.destroy
+
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
   end
