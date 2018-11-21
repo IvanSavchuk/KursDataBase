@@ -58,7 +58,6 @@ class PostsController < ApplicationController
   @post = Post.find(params[:id])
 
     respond_to do |format|
-      # this code dont work!!!
       if @post.update(post_params)
         format.html  { redirect_to(@post,
                       :notice => 'Post was successfully updated.') }
