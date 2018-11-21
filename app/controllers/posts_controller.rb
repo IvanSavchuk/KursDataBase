@@ -4,12 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-  @posts = Post.all
-
-    respond_to do |format|
-      format.html  # index.html.erb
-      format.json  { render :json => @posts }
-    end
+    @posts = Post.all
   end
 
   # GET /posts/1
@@ -41,7 +36,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-  @post = Post.new(post_params)
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -63,7 +58,8 @@ class PostsController < ApplicationController
   @post = Post.find(params[:id])
 
     respond_to do |format|
-      if @post.update_attribute(params[:post])
+      # this code dont work!!!
+      if @post.update(post_params)
         format.html  { redirect_to(@post,
                       :notice => 'Post was successfully updated.') }
         format.json  { head :no_content }
@@ -78,8 +74,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-  @post = Post.find(params[:id])
-  @post.destroy
+    @post = Post.find(params[:id])
+    @post.destroy
 
     respond_to do |format|
       format.html { redirect_to posts_url }
@@ -88,13 +84,14 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.require(:post).permit(:name, :title, :content)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def post_params
+    params.require(:post).permit(:name, :title, :content)
+  end
 end
