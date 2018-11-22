@@ -25,12 +25,11 @@ production:
   database: db/production.sqlite3
 
 # MySQL database!!!
-
-# development:
-#   adapter: mysql2
-#   encoding: utf8
-#   database: blog_development
-#   pool: 5
-#   username: root
-#   password:
-#   socket: /tmp/mysql.sock
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: KursDataBase
+  pool: 5
+  username: root
+  password: Adm1234
+  socket: /tmp/mysql.sock

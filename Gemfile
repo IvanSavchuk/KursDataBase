@@ -5,6 +5,10 @@ ruby '2.5.3'
 #add this gems
 gem 'devise'
 gem 'rails_admin', '~> 1.3'
+# add gems for mySQL connects!
+# gem 'mysql', '~> 2.9', '>= 2.9.1'
+gem 'mysql2'
+gem 'ruby-mysql', '~> 2.9', '>= 2.9.14'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
