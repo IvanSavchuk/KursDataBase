@@ -1,20 +1,25 @@
 <p id="notice"><%= notice %></p>
-
+<div style="background: #A9A9A9; border: 7px solid #000000;">
 <p>
-  <b>Name:</b>
-  <%= @post.name %>
+  <i>
+    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000; text-align: left;">Title of the movie:</b>
+    <%= @post.name %>
+  </i>
 </p>
-
 <p>
-  <b>Title:</b>
-  <%= @post.title %>
+  <i>
+    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">Date of the movie show:</b>
+    <%= @post.title %>
+  </i>
 </p>
-
 <p>
-  <b>Content:</b>
-  <%= @post.content %>
+  <i>
+    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">Description of the movie:</b>
+    <%= @post.content %>
+  <i>
 </p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>
+<div style="text-align: center;">
+  <i style="border-left: 7px solid #9ACD32; background: #EEEEEE;"><%= link_to 'Edit', edit_post_path(@post) %></i> |
+  <i style="border-left: 7px solid #FFFF00; background: #EEEEEE;"><%= link_to 'Back', posts_path %></i>
+</div>
