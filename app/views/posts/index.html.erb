@@ -1,10 +1,10 @@
-<h1><i style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">|  Movie Schedule</i></h1>
+<h1><i style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">|  Розклад фільмів</i></h1>
 
 <table>
   <tr>
-    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Title of the movie</th>
-    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Date of the movie show</th>
-    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Description of the movie</th>
+    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Фільм</th>
+    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Дата</th>
+    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Опис фільму</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,9 +15,9 @@
     <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.name %></td>
     <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.title %></td>
     <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.content %></td>
-    <td><i style="border-left: 7px solid #66CDAA; background: #EEEEEE;"><%= link_to 'Show', post %></i></td>
-    <td><i style="border-left: 7px solid #9ACD32; background: #EEEEEE;"><%= link_to 'Edit', edit_post_path(post) %></i></td>
-    <td><i style="border-left: 7px solid #DC143C; background: #EEEEEE;"><%= link_to 'Destroy', post, :confirm => 'Are you sure?',
+    <td><i style="border-left: 7px solid #66CDAA; background: #EEEEEE;"><%= link_to 'Показати', post %></i></td>
+    <td><i style="border-left: 7px solid #9ACD32; background: #EEEEEE;"><%= link_to 'Редагувати', edit_post_path(post) %></i></td>
+    <td><i style="border-left: 7px solid #DC143C; background: #EEEEEE;"><%= link_to 'Видалити', post, :confirm => 'Are you sure?',
                                      :method => :delete %></i></td>
   </tr>
 <% end %>
@@ -26,5 +26,5 @@
 <br />
 
 <i style="border-left: 10px solid #9ACD32; background: #EEEEEE;">
-  <%= link_to '> New post', new_post_path %>
+  <%= link_to '> Новий фільм', new_post_path %>
 </i>

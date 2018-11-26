@@ -2,24 +2,24 @@
 <div style="background: #A9A9A9; border: 7px solid #000000;">
 <p>
   <i>
-    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000; text-align: left;">Title of the movie:</b>
+    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000; text-align: left;">Назва фільму:</b>
     <%= @post.name %>
   </i>
 </p>
 <p>
   <i>
-    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">Date of the movie show:</b>
+    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">Дата показу фільму:</b>
     <%= @post.title %>
   </i>
 </p>
 <p>
   <i>
-    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">Description of the movie:</b>
+    <b style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">Опис фільму:</b>
     <%= @post.content %>
   <i>
 </p>
 </div>
 <div style="text-align: center;">
-  <i style="border-left: 7px solid #9ACD32; background: #EEEEEE;"><%= link_to 'Edit', edit_post_path(@post) %></i> |
-  <i style="border-left: 7px solid #FFFF00; background: #EEEEEE;"><%= link_to 'Back', posts_path %></i>
+  <i style="border-left: 7px solid #9ACD32; background: #EEEEEE;"><%= link_to 'Редагувати', edit_post_path(@post) %></i> |
+  <i style="border-left: 7px solid #FFFF00; background: #EEEEEE;"><%= link_to 'Назад', posts_path %></i>
 </div>
