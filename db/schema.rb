@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2018_11_14_104332) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "times", limit: 60, null: false
+    t.datetime "times_m"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
