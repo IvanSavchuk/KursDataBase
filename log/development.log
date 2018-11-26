@@ -14003,3 +14003,37 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/posts/7" for 127.0.0.1 at 2018-11-26 10:02:20 +0200
+  [1m[35m (0.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1027ms (Views: 972.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-26 10:02:23 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 99ms (Views: 93.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-26 10:02:52 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 1.0ms)
+
+
