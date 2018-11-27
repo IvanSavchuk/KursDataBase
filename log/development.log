@@ -17053,3 +17053,639 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 103ms (Views: 98.6ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:39:45 +0200
+  [1m[35m (39.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 1038ms (Views: 1000.1ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-11-27 08:40:11 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (18.7ms)
+  Rendered posts/edit.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 196ms (Views: 110.8ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2018-11-27 08:40:21 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AgeISCrtpj0vnyghPUTSHge8ocXS1b63JZPAxeVar5wvWJd/MpDBYHC+ICTKwQz/Pc75u0F0NvMa3kr7hLWEAA==", "post"=>{"name"=>"DZIDZIO перший раз", "title"=>"05.11.2018 - 25.11.2018", "times"=>"10:00 12:00 14:00 16:00 18:00 20:00", "content"=>"Дзідзьо спізнюється на літак до Португалії, де на нього чекала мама та знайомство з дівчиною Зоряною, яку вона йому і підшукала. Мама так розгнівана легковажністю сина, що виганяє його зі своєї міської квартири та відправляє у дідову хату.\r\n\r\nУ селі Дзідзьо починає життя із дуже делікатної для себе ситуації. Його друг та сусід Бодя Павук починає розважати Дзідзя у свій брутальний спосіб. Але у чоловічий тандем втручається тендітна дівчина із дивним ім'ям Квітка. Пристрасті розпалюються, емоції вирують, інтриги посилюються. Яким буде перший раз Дзідзя?"}, "commit"=>"Update Post", "id"=>"7"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:61
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2018-11-27 08:40:21 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 89ms (Views: 78.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:40:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 120ms (Views: 114.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=c&commit=%D0%9F%D0%BE%D1%88%D1%83%D0%BA" for 127.0.0.1 at 2018-11-27 08:41:45 +0200
+  [1m[35m (35.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"c", "commit"=>"Пошук"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (12.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%c%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 1015ms (Views: 978.7ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=&commit=%D0%9F%D0%BE%D1%88%D1%83%D0%BA" for 127.0.0.1 at 2018-11-27 08:41:54 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Пошук"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 150ms (Views: 142.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2018-11-27 08:42:11 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (64.2ms)
+  Rendered posts/edit.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 163ms (Views: 138.7ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2018-11-27 08:42:26 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nHkaSnRAjRMww8LpSkuwBhWYi7tbJ2Zi0Z9p+JkvWnuifwXycqhpZBXSXZ3cDSkYbrVUj79W00LuTnniF8zyHg==", "post"=>{"name"=>"Дівчина у павутинні", "title"=>"09.11.2018 - 23.11.2018", "times"=>"10:30 12:30 14:30 16:30 18:30 20:30", "content"=>"Гостросюжетний детективний фільм «Дівчина у павутинні» – екранізація однойменного роману шведського журналіста і письменника Девіда Лаґеркранца, який продовжує трилогію «Міленіум» Стіґа Ларсона.\r\n\r\nГоловна героїня улюбленої багатьма книжкової трилогії «Міленіум» Лісбет Саландер знову оживе на екранах кінотеатрів. У четвертій частині дівчина-хакерка намагається знищити кримінальну імперію свого батька і веде з ним запеклу боротьбу. Її друг Мікаель Блумквіст теж переживає нелегкі часи – на журнал «Міленіум» чекає неприємне об’єднання з великим медіаконцерном, а його самого колеги звинувачують у втраті свого блискучого професіоналізму. Незважаючи на свої особисті проблеми і труднощі, Мікаель і Лісбет беруться за нову справу і вплутуються в розслідування вбивства відомого шведського вченого Болдера, який займався вивченням штучного інтелекту. Старі вороги і рахунки вилазять назовні і тепер у неї залишається лише один вихід: постаратися не “застрягти в павутині” зла, сплетеної недоброзичливцями."}, "commit"=>"Update Post", "id"=>"10"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[36mPost Update (0.8ms)[0m  [1m[33mUPDATE `posts` SET `times` = '10:30 12:30 14:30 16:30 18:30 20:30', `updated_at` = '2018-11-27 06:42:26' WHERE `posts`.`id` = 10[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[35m (57.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:61
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 85ms (ActiveRecord: 59.5ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2018-11-27 08:42:26 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 10 LIMIT 1[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:42:34 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 110ms (Views: 106.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/11/edit" for 127.0.0.1 at 2018-11-27 08:42:47 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 11 LIMIT 1[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.5ms)
+  Rendered posts/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 120ms (Views: 111.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/posts/11" for 127.0.0.1 at 2018-11-27 08:43:05 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6W/9VE2auZ1BSo8r3uDQyQ/P8brb4MeuBFQky8jZweh3FJKwzAX1CiWRz/0j9esG8ULOwTR7fPDI1Afo63rww==", "post"=>{"name"=>"Оверлорд", "title"=>"12.11.2018 - 26.11.2018", "times"=>"09:30 11:30 13:30 15:30 17:30 19:30", "content"=>"Події розгортаються у роки Другої світової війни. Наближається висадка союзних військ у Нормандії. Щоб зробити операцію безпечнішою, у тил ворога проникає група диверсантів, яка має знищити радіомачти супротивника. У невеличкому поселенні солдати натикаються на секретні лабораторії, де нацисти проводили жахливі досліди над людьми. Плоди цих дослідів – надзвичайно сильні та витривалі істоти, яких вже складно назвати людьми – вийшли з під контролю. Тепер у кожного з солдатів цієї війни з’явився ще один супротивник – набагато жорстокіший і непередбачуваніший, ніж можна собі уявити.\r\n\r\nФантастичний бойовик «Оверлорд» був задуманий Джей Джей Абрамсом та сценаристом Біллі Реєм. Студія Paramount придбала фільм у 2007 році та залучила до роботи над сценарієм Марка Л. Сміта. У лютому 2017 оголосили, що режисурою займатиметься Юліус Авері. Акторський склад оголосили у травні того ж року і одразу ж приступили до зйомок. Джей Джей Абрамс залишився у проекті у якості продюсера."}, "commit"=>"Update Post", "id"=>"11"}
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 11 LIMIT 1[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[36mPost Update (2.8ms)[0m  [1m[33mUPDATE `posts` SET `times` = '09:30 11:30 13:30 15:30 17:30 19:30', `updated_at` = '2018-11-27 06:43:05' WHERE `posts`.`id` = 11[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[35m (68.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:61
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 92ms (ActiveRecord: 73.3ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2018-11-27 08:43:05 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 11 LIMIT 1[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 96ms (Views: 89.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:43:22 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 132ms (Views: 125.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2018-11-27 08:43:40 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.4ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.3ms)
+  Rendered posts/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 121ms (Views: 90.4ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/posts/12" for 127.0.0.1 at 2018-11-27 08:43:58 +0200
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiljOGnOHPSYiqYNJkw2DLJLEkPtR8Sur/C+aiV1WXIKIT/LKfytgVQX/BWGQONNUaWJhNAwuBUd+jrB9q3vnQ==", "post"=>{"name"=>"Король Данило", "title"=>"22.11.2018 - 28.11.2018", "times"=>"08:30 10:30 12:30 13:30 15:30 18:30", "content"=>"Події розгортаються у 1238 році. Князь Данило (Сергій Ярмошенко) разом зі своїм братом Васильком (Юрій Вихованець) нападають на прикордонний замок.\r\n\r\nУкраїнський бойовик «Король Данило» про відому історичну постать зняв режисер Тарас Химич. Кар’єру починав зі зйомок кліпів, реклами та корпоративних фільмів. Серйозні повнометражні роботи усі присвячені історії України у 20 столітті. Свій новий фільм Химич знімає на Прикарпатті, у Львові та Львівській області, де збудували масштабні декорації, одна з яких відтворює середньовічне місто Холм. Частину декорацій планують не руйнувати та використовувати згодом як музей. У процесі зйомок довелося замінити виконавця головної ролі. Зрештою втілить героя на екрані Сергій Ярмошенко. Останні 18 років він працює в кінному театрі на острові Хортиця, тож у сідлі тримається впевнено. Усі трюки він виконує без дублера. Гроші на зйомки збирали на краудфандинговій платформі Na-Starte. Загальний кошторис стрічки склав 4 млн. грн"}, "commit"=>"Update Post", "id"=>"12"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:58
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[36mPost Update (0.9ms)[0m  [1m[33mUPDATE `posts` SET `times` = '08:30 10:30 12:30 13:30 15:30 18:30', `updated_at` = '2018-11-27 06:43:58' WHERE `posts`.`id` = 12[0m
+  ↳ app/controllers/posts_controller.rb:61
+  [1m[35m (73.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:61
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 91ms (ActiveRecord: 75.7ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2018-11-27 08:43:58 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 12 LIMIT 1[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 118ms (Views: 111.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:44:01 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-27 08:45:19 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.2ms)
+  Rendered posts/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 106ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:45:41 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 115ms (Views: 105.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2018-11-27 08:45:44 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:13
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 94ms (Views: 87.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-11-27 08:46:03 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.1ms)
+  Rendered posts/edit.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 122ms (Views: 115.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:46:19 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 115ms (Views: 109.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=DZIDZIO&commit=%D0%9F%D0%BE%D1%88%D1%83%D0%BA" for 127.0.0.1 at 2018-11-27 08:46:34 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"DZIDZIO", "commit"=>"Пошук"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%DZIDZIO%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 110ms (Views: 100.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&search=&commit=%D0%9F%D0%BE%D1%88%D1%83%D0%BA" for 127.0.0.1 at 2018-11-27 08:46:57 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Пошук"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 104ms (Views: 96.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 08:47:09 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-27 08:47:23 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (24.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (73.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (13.9ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (34.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (11.4ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (15.0ms)
+Completed 200 OK in 2284ms (Views: 1045.6ms | ActiveRecord: 48.9ms)
+
+
+Started GET "/admin/post?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-27 08:47:53 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"post"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPost Load (27.5ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY posts.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (358.0ms)
+Completed 200 OK in 419ms (Views: 368.8ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-27 08:48:15 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (232.3ms)
+Completed 200 OK in 302ms (Views: 243.7ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/admin/post?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-27 08:48:32 +0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"post"}
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mPost Load (4.7ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY posts.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (277.9ms)
+Completed 200 OK in 327ms (Views: 302.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-11-27 08:48:33 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (36.5ms)
+Completed 200 OK in 110ms (Views: 82.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-27 08:48:36 +0200
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (32.4ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.0ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (23.8ms)
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.0ms)
+  Rendering /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (12.2ms)
+Completed 200 OK in 488ms (Views: 468.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-11-27 08:48:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 08:48:39 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-11-27 08:48:49 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 08:48:49 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in/new" for 127.0.0.1 at 2018-11-27 08:49:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/sign_in/" for 127.0.0.1 at 2018-11-27 08:49:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 08:49:08 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 85ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 08:53:41 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (7.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 105ms (Views: 94.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-11-27 08:54:19 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (3.6ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.6ms)
+  Rendered posts/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 120ms (Views: 104.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:00:45 +0200
+  [1m[35m (3.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (6.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 975ms (Views: 924.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-27 09:00:50 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (22.0ms)
+  Rendered posts/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 142ms (Views: 138.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-27 09:03:30 +0200
+  [1m[35m (28.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (36.4ms)
+  Rendered posts/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 953ms (Views: 849.7ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:03:34 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 147ms (Views: 141.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-11-27 09:03:41 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.9ms)
+  Rendered posts/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 113ms (Views: 102.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:03:45 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 121ms (Views: 115.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-27 09:03:47 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.3ms)
+  Rendered posts/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 99ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:03:50 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 148ms (Views: 143.5ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('2374805029854829215', 0)[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('2374805029854829215')[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/bin/rake:23
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:04:11 +0200
+  [1m[35m (37.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 931ms (Views: 905.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-11-27 09:04:16 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.0ms)
+  Rendered posts/edit.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 129ms (Views: 112.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:04:18 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (6.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 134ms (Views: 124.9ms | ActiveRecord: 6.0ms)
+
+
