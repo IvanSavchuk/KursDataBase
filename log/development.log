@@ -17689,3 +17689,38 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 134ms (Views: 124.9ms | ActiveRecord: 6.0ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:12:11 +0200
+  [1m[35m (0.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/ivan-devops/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (82.5ms)
+Completed 200 OK in 940ms (Views: 903.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2018-11-27 09:12:16 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:89
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (17.3ms)
+  Rendered posts/edit.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 149ms (Views: 135.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-11-27 09:12:33 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE (name LIKE '%%')[0m
+  ↳ app/views/posts/index.html.erb:29
+  Rendered posts/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 134ms (Views: 125.7ms | ActiveRecord: 5.2ms)
+
+
