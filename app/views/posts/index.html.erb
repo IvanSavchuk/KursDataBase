@@ -1,4 +1,19 @@
-<h1><i style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">|  Розклад фільмів</i></h1>
+<div style="border: 4px solid #2F4F4F; background: #2F4F4F; padding-top: 10px; padding-bottom: 10px; padding-left: 80%;position: fixed; top: 0; right: 0;">
+  <%= form_tag posts_path, :method => 'get' do %>
+  <i style="border: 4px solid #2F4F4F; background: #9ACD32;"><%= text_field_tag :search, params[:search] %></i>
+  <i style="border: 4px solid #2F4F4F; background: #9ACD32;"><%= submit_tag "Пошук" %></i>
+  <% end %>
+</div>
+
+<br></br>
+
+<h1><i style="border-left: 7px solid red; color: #EEEEEE; text-shadow: 3px 3px 9px #FF0000;">|  Розклад кінофільмів</i></h1>
+
+<i style="border-left: 10px solid #9ACD32; background: #EEEEEE;">
+  <%= link_to 'Додати новий фільм', new_post_path %>
+</i>
+
+<br></br>
 
 <table>
   <tr>
@@ -24,7 +39,3 @@
 </table>
 
 <br />
-
-<i style="border-left: 10px solid #9ACD32; background: #EEEEEE;">
-  <%= link_to '> Новий фільм', new_post_path %>
-</i>
