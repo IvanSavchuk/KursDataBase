@@ -5,7 +5,7 @@ ruby '2.5.3'
 
 #add this gems
 gem 'devise'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 # add gems for mySQL connects!
 # gem 'mysql', '~> 2.9', '>= 2.9.1'
 gem 'mysql2', '~> 0.5.2'
