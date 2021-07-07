@@ -19,6 +19,7 @@
   <tr>
     <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Фільм</th>
     <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Дата</th>
+    <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Час показу</th>
     <th style="border: 3px solid #000000; color: #000000; background: #C0C0C0;">Опис фільму</th>
     <th></th>
     <th></th>
@@ -29,6 +30,7 @@
   <tr>
     <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.name %></td>
     <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.title %></td>
+    <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.times %></td>
     <td style="border: 3px solid #000000; background: #EEEEEE;"><%= post.content %></td>
     <td><i style="border-left: 7px solid #66CDAA; background: #EEEEEE;"><%= link_to 'Показати', post %></i></td>
     <td><i style="border-left: 7px solid #9ACD32; background: #EEEEEE;"><%= link_to 'Редагувати', edit_post_path(post) %></i></td>
